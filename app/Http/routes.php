@@ -29,3 +29,18 @@ Route::get('/', function () {
 Route::group(['middleware' => ['web']], function () {
     //
 });
+
+Route::resource('lane', 'LanesController',
+	['only' => ['index', 'show']]);	
+
+});
+
+Route::resource('tag', 'TagsController',
+	['only' => ['index', 'show']]);	
+
+});
+
+Route::resource('task', 'TasksController',
+	['only' => ['index', 'show']]);	
+
+});
