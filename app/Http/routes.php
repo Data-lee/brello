@@ -30,17 +30,16 @@ Route::group(['middleware' => ['web']], function () {
     //
 });
 
-Route::resource('lane', 'LanesController',
-	['only' => ['index', 'show']]);	
+Route::resource('lane', 'LanesController', [
+	'except' => ['create', 'edit']
+]);
 
-});
+Route::resource('tag', 'TagsController', [
+	'except' => ['create', 'edit']
+]);
 
-Route::resource('tag', 'TagsController',
-	['only' => ['index', 'show']]);	
+Route::resource('task', 'TasksController', [
+	'except' => ['create', 'edit']
+]);
 
-});
 
-Route::resource('task', 'TasksController',
-	['only' => ['index', 'show']]);	
-
-});
