@@ -30,15 +30,15 @@ Route::group(['middleware' => ['web']], function () {
     //
 });
 
-Route::resource('lane', 'LanesController', [
+Route::resource('lanes', 'LanesController', [
 	'except' => ['create', 'edit']
 ]);
 
-Route::resource('tag', 'TagsController', [
+Route::resource('tags', 'TagsController', [
 	'except' => ['create', 'edit']
 ]);
 
-Route::resource('task', 'TasksController', [
+Route::resource('tasks', 'TasksController', [
 	'except' => ['create', 'edit']
 ]);
 
